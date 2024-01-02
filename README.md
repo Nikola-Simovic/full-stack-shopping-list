@@ -4,20 +4,24 @@
 
 Welcome to our project for the Web Software Production course. We are developing a comprehensive shopping list application, showcasing our proficiency in full-stack development. Our project has a CI/CD system, using the tools and methods we learned in the course. This project represents our learning journey in full-stack development.
 
-========================
+------------------------
 
 ## Server information
 
 Server address:
 Endpoints:
 
+### How to run locally: 
+
+- dependensies that need to be installed:
+
 ------------------------
 
-## Release History
+## Phases
 
-* 0.1.0
-    * Initial Setup
-        * Creating boilerplate for backend and frontend
+**Phase 1**
+
+Installing and creating boilerplates for backend and frontend
     ```
     npx create-express-api -d backend
     ```
@@ -25,5 +29,29 @@ Endpoints:
     npx create-react-app frontend
     ```
 
+**Phase 2**
+
+Created the needed dockerfiles and made sure that all containers are running and that its running in the server
+
+**Phase 3**
+
+**Phase 4**
+
+**Phase 5**
+
+
+------------------------
+
+## Release History
+
+* 0.1.0
+    * Initial Setup
+
 * 0.2.0
     * Dockerizing the localhost 
+
+
+------------------------
+
+Expected project grade and reasoning behind it:
+
