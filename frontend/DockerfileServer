@@ -11,4 +11,3 @@ WORKDIR /opt/app
 
 CMD ["npx", "serve", "-s", "build"]
 
-#the dockerfileservers run build:dev!

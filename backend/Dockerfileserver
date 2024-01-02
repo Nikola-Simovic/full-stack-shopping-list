@@ -9,4 +9,3 @@ WORKDIR /opt/app
 
 CMD ["npm", "run", "start"]
 
-#the dockerfileservers run build:dev!
