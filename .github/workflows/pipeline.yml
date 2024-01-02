@@ -36,7 +36,7 @@ jobs:
       # Installing the node modules for the backend
       - name: Install Backend Dependencies
         working-directory: ./backend
-        run: npm installA
+        run: npm install
       # Running the linter and tests for the backend code
       - name: Run Backend Tests
         working-directory: ./backend
