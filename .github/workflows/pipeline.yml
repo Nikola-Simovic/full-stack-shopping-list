@@ -36,7 +36,7 @@ jobs:
       # Installing the node modules for the backend
       - name: Install Backend Dependencies
         working-directory: ./backend
-        run: npm install
+        run: npm installA
       # Running the linter and tests for the backend code
       - name: Run Backend Tests
         working-directory: ./backend
@@ -197,7 +197,7 @@ jobs:
 env: # adding enviromental variables.
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
-  FRONTEND_IMAGE_NAME: se-5G00DM04/2023---final-project-not-fast-just-furious/tree/main/frontend
-  BACKEND_IMAGE_NAME:  se-5G00DM04/2023---final-project-not-fast-just-furious/tree/main/backend
+  FRONTEND_IMAGE_NAME: se-5g00dm04/2023---final-project-not-fast-just-furious/tree/main/frontend
+  BACKEND_IMAGE_NAME:  se-5g00dm04/2023---final-project-not-fast-just-furious/tree/main/backend
 
 # Trying out stuff

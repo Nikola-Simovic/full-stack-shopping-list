@@ -10,3 +10,4 @@ RUN cd /opt/app \
 WORKDIR /opt/app
 
 CMD ["npx", "serve", "-s", "build"]
+
