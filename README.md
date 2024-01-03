@@ -21,6 +21,16 @@ Endpoints:
 
 - dependensies that need to be installed:
 
+for backend dependensies:
+```
+npm install
+```
+
+for frontend dependensies:
+```
+npm test
+```
+
 ------------------------
 
 ## Phases
