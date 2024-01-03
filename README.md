@@ -19,14 +19,14 @@ Endpoints:
 
 ### How to run locally: 
 
-- dependensies that need to be installed:
+- dependencies that need to be installed:
 
-for backend dependensies:
+for backend dependencies:
 ```
 npm install
 ```
 
-for frontend dependensies:
+for frontend dependencies:
 ```
 npm test
 ```
@@ -54,12 +54,12 @@ Created the needed dockerfiles and made sure that all containers are running and
 
 A CI/CD pipeline was set up by following stages: test, build, and deploy. To ensure functionality, we installed dependencies in both the backend and frontend folders. Before installing the required dependencies, navigate to the correct folder from the main directory using 'cd backend' and 'cd frontend'.
 
-for backend dependensies:
+for backend dependencies:
 ```
 npm install
 ```
 
-for frontend dependensies:
+for frontend dependencies:
 ```
 npm test
 ```
