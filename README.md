@@ -73,7 +73,6 @@ A remote server was taken into use in this phase and here the details for it:
     * backend 172.16.6.26:4000
 
 
-
 **Phase 4**
 
 **Phase 5**
