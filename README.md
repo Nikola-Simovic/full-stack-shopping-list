@@ -1,7 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/iuze45af)
 # Not fast just furious: Shopping list
 > By Maria Kailahti and Nikola Simovic
-> @mariakailahti @Nikola-Simovic
 
 Welcome to our project for the Web Software Production course. We are developing a comprehensive shopping list application, showcasing our proficiency in full-stack development. Our project has a CI/CD system, using the tools and methods we learned in the course. This project represents our learning journey in full-stack development.
 
@@ -10,10 +9,14 @@ Welcome to our project for the Web Software Production course. We are developing
 ## Server information
 
 Server address: https://23wsp-pro12.course.tamk.cloud/
+
 The IP address: 172.16.6.26
-    Ports:
-    * frontend: 172.16.6.26:8000 
-    * backend 172.16.6.26:4000
+    
+    
+Ports:
+* frontend: 172.16.6.26:8000 
+* backend 172.16.6.26:4000
+
 
 Endpoints:
 
@@ -48,7 +51,7 @@ Installing and creating boilerplates for backend and frontend:
 
 **Phase 2**
 
-Created the needed dockerfiles and made sure that all containers are running and that its running in the server
+Created the needed dockerfiles and made sure that all containers are running and that its running in the local host properly.
 
 **Phase 3**
 
@@ -87,7 +90,7 @@ A remote server was taken into use in this phase and here the details for it:
     * README
 
 * 0.2.0
-    * Dockerizing the localhost 
+    * Dockerizing and making sure everything operates properly in the localhost
     * Updated README
 
 * 0.3.0
