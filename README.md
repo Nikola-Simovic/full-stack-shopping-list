@@ -22,9 +22,11 @@ Endpoints:
 
 ### How to run locally: 
 
+
 In order to run the code locally, run npm install in the appropriate folders (frontend and backend), after which by running the "npm start" command in the terminal, the frontend or backend will start functioning and will be accessible on your localhost via ports 3000 and 5000.
 
 dependencies that need to be installed:
+
 
 for backend dependencies:
 ```
@@ -97,10 +99,12 @@ Finally we created environmental secrets and adjusted branch protection via gith
     * Updated README
 
 * 0.3.0
-    * CI/CD Pipeline and Remote Server
+    * CI/CD Pipelines and Remote Server taken into function
     * Updated README
 
 
 ------------------------
 
-Expected project grade and reasoning behind it: 50%, all the specified functionalities for the steps up until this point are met.
+=======
+Expected project grade and reasoning behind it:
+50%, all the specified functionalities for the steps up until this point are met.
