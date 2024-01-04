@@ -1,9 +1,13 @@
-name: Branch Verification
+name: Backend PR Verification
 
 on:
   push:
     branches-ignore:
-    - 'main'
+     - 'main'
+    tags-ignore:
+     - '**'
+    paths:
+     - backend/**
 
 env: 
   REGISTRY: ghcr.io
@@ -17,7 +21,7 @@ jobs:
     # running on ubuntu
     runs-on: ubuntu-latest
 
-    name: Branch Verification Tests
+    name: Backend Branch Tests
 
     steps:
       # Fetch the code using the checkout action
@@ -30,16 +34,6 @@ jobs:
         with:
           node-version: "18"
           
-      # Installing the node modules for the frontend
-      - name: Install Frontend Dependencies
-        working-directory: ./frontend
-        run: npm install
-        
-      # Running the tests for the frontend code
-      - name: Run Frontend Tests
-        working-directory: ./frontend
-        # this command needs to be added to the frontend package.json
-        run: npm test
         
       # Installing the node modules for the backend
       - name: Install Backend Dependencies
@@ -49,12 +43,12 @@ jobs:
       # Running the linter and tests for the backend code
       - name: Run Backend Tests
         working-directory: ./backend
-        run: npm run lint && npm test
+        run: npm run lint && npm run test
 
   build:
     runs-on: ubuntu-latest
     # Test job needs to succeed
-    name: Verify Branch Build Containers
+    name:  Build Backend Containers
     
     needs: test
     # Give the job permission to write packages to the registry
@@ -90,14 +84,6 @@ jobs:
           # A special GitHub secret token we can use
           password: ${{ secrets.GITHUB_TOKEN }}
           
-      # Building and pushing the frontend image to the registry using an action
-      - name: Build and push Docker Frontend images
-        uses: docker/build-push-action@v5.0.0
-        with:
-          context: ./frontend
-          file: ./frontend/DockerfileServer
-          push: false
-          tags: "${{ env.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}"
           
       # Building and pushing the backend image to the registry using an action
       - name: Build and push Docker Backend images
