@@ -102,6 +102,8 @@ Finally we created environmental secrets and adjusted branch protection via gith
     * CI/CD Pipelines and Remote Server taken into function
     * Updated README
 
+* 0.4.0
+    * Frontend
 
 ------------------------
 
