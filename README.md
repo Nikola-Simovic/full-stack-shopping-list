@@ -19,6 +19,8 @@ Endpoints:
 
 ### How to run locally: 
 
+- in order to run the code locally, run npm install in the appropriate folders (frontend and backend respectively), after which by running the "npm start" command in the terminal, the frontend or backend will start functioning and will be accessible on your localhost via ports 3000 and 5000.
+
 - dependencies that need to be installed:
 
 for backend dependencies:
@@ -52,7 +54,7 @@ Created the needed dockerfiles and made sure that all containers are running and
 
 **Phase 3**
 
-A CI/CD pipeline was set up by following stages: test, build, and deploy. To ensure functionality, we installed dependencies in both the backend and frontend folders. Before installing the required dependencies, navigate to the correct folder from the main directory using 'cd backend' and 'cd frontend'.
+In this stage two CI/CD pipelines were set up, with the following stages: test, build, and deploy. One in order to make sure that when posting something to main everything functions properly, and the other in order to make sure the code is working properly before a pull request can be made. To ensure functionality, we installed dependencies in both the backend and frontend folders. Before installing the required dependencies yourself, navigate to the correct folder from the main directory using 'cd backend' and 'cd frontend'.
 
 for backend dependencies:
 ```
@@ -61,7 +63,7 @@ npm install
 
 for frontend dependencies:
 ```
-npm test
+npm install
 ```
 
 A remote server was taken into use in this phase and here the details for it:
@@ -92,11 +94,11 @@ A remote server was taken into use in this phase and here the details for it:
     * Updated README
 
 * 0.3.0
-    * CI/CD Pipeline and Remote Server
+    * CI/CD Pipelines and Remote Server taken into function
     * Updated README
 
 
 ------------------------
 
 Expected project grade and reasoning behind it:
-
+50%, all the specified functionalities for the steps up until this point are met.
