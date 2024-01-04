@@ -30,7 +30,7 @@ npm install
 
 for frontend dependencies:
 ```
-npm test
+npm install
 ```
 
 ------------------------
