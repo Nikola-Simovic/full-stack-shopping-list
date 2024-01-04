@@ -1,0 +1,32 @@
+@hostname = localhost 
+@port = 5000
+@host = http://{{hostname}}:{{port}}
+
+GET {{host}}/api/v1/shoppingItems
+
+###
+
+
+POST {{host}}/api/v1/shoppingItems
+Content-Type: application/json
+
+{
+    "name": "Burger King Bacon Meal"
+}
+
+
+###
+
+PUT {{host}}/api/v1/shoppingItems
+Content-Type: application/json
+
+{
+  "id": 4000,
+  "name": "Red Bull (still not sponsored)"
+}
+
+###
+
+DELETE {{host}}/api/v1/shoppingItems/2
+
+
