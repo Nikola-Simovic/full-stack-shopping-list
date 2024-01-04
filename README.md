@@ -106,5 +106,6 @@ Finally we created environmental secrets and adjusted branch protection via gith
 ------------------------
 
 =======
+
 Expected project grade and reasoning behind it:
 50%, all the specified functionalities for the steps up until this point are met.
