@@ -104,6 +104,7 @@ Finally we created environmental secrets and adjusted branch protection via gith
 
 * 0.4.0
     * Frontend
+    * Backend
 
 ------------------------
 
