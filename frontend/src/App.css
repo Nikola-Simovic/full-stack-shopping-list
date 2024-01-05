@@ -24,7 +24,7 @@ body {
 
 .main-container {
   background-color: #809671;
-  width: 500px;
+  width: 5000px;
   height: min-content;
   border-radius: 5px;
   padding: 20px;
@@ -42,12 +42,12 @@ body {
   margin-bottom: 1em;
   display: flex;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 5px;
 }
 
 .add-item-box svg {
-  margin: 5px;
+  margin: 1px;
 }
 
 .add-item-input {
@@ -100,8 +100,7 @@ input:focus {
 }
 
 .total {
-  float: right;
-  padding: 10px;
+  padding: 15px;
 }
 
 .quantity {
@@ -120,7 +119,7 @@ button {
   background: transparent;
   border: none;
   margin: 3px;
-  color: #809671;
+  color: #e5d2b8;
 }
 button:focus {
   outline: 0;
