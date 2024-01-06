@@ -8,12 +8,20 @@ const NewItem = (props) => {
     const [items,setItems] = useState({
 
         name:'',
+        quantity:1,
     });
 
    const ItemChangeHandler = (event) => {
     setItems((prevState) => ({
       ...prevState,
       name: event.target.value,
+    }));
+  };
+
+  const updateQuantityHandler = (event) => {
+    setItems((prevState) => ({
+      ...prevState,
+      quantity: event.target.value,
     }));
   };
 
@@ -31,6 +39,7 @@ const NewItem = (props) => {
     props.addItem(items);
     setItems({
       name: '',
+      quantity: 1,
     });
   };
 

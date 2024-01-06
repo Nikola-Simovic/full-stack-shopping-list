@@ -2,31 +2,33 @@
 @port = 5000
 @host = http://{{hostname}}:{{port}}
 
-GET {{host}}/api/v1/shoppingItems
+GET {{host}}/api/v1/items
 
 ###
 
 
-POST {{host}}/api/v1/shoppingItems
+POST {{host}}/api/v1/items
 Content-Type: application/json
 
 {
-    "name": "Burger King Bacon Meal"
+    "name": "Burger King Bacon Meal",
+    "quantity": 1
 }
 
 
 ###
 
-PUT {{host}}/api/v1/shoppingItems
+PUT {{host}}/api/v1/items
 Content-Type: application/json
 
 {
-  "id": 4000,
-  "name": "Red Bull (still not sponsored)"
+  "id": 2,
+  "name": "Red Bull (still not sponsored)",
+  "quantity": 1123
 }
 
 ###
 
-DELETE {{host}}/api/v1/shoppingItems/2
+DELETE {{host}}/api/v1/items/2
 
 

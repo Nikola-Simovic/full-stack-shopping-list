@@ -5,14 +5,19 @@ const ITEMS = [
     {
         id:1,
         name:"Item 1",
+        quantity: 1,
     },
     {
         id:2,
         name:"Item 2",
+        quantity: 1,
+
     },
     {
         id:3,
         name:"Red bull (not sponsored)",
+        quantity: 1,
+
     },
 ];
 
@@ -32,6 +37,7 @@ router.get('/:id',(req,res)=>{
 
 const schema = Joi.object({
     name: Joi.string().min(2).required(),
+    quantity: Joi.number().min(1).required()
 });
 
 router.post('/', (req,res) => { 
@@ -43,10 +49,11 @@ router.post('/', (req,res) => {
         return;
     }
  
-    const { name} =  req.body;
+    const { name,quantity} =  req.body;
     const newItem = {
         id: ITEMS.length+1, 
         name: name,
+        quantity:1,
     }
     ITEMS.push(newItem);
     res.send(newItem);
@@ -63,6 +70,7 @@ router.put('/',(req,res) => {
         return;
     }
     ITEMS[itemIndex].name=req.body.name;
+    ITEMS[itemIndex].quantity=req.body.quantity;
     res.json(ITEMS[itemIndex]);
 
 });
@@ -77,6 +85,7 @@ router.put('/:id', (req, res) => {
     }
   
     ITEMS[itemIndex].name = req.body.name;
+    ITEMS[itemIndex].quantity = req.body.quantity;
     res.json(ITEMS[itemIndex]);
   });
 
