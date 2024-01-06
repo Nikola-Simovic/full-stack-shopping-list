@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinus, faPlus, faCheckCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMinus, faPlus, faTrashAlt, faCircle, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 const ItemListItem = ({ item, onRemove, onUpdateQuantity }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
   const handleRemove = () => {
     if (onRemove) {
       onRemove(item.name);
@@ -13,13 +15,23 @@ const ItemListItem = ({ item, onRemove, onUpdateQuantity }) => {
     onUpdateQuantity(item.name, quantityChange);
   };
 
+  const handleButtonClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
-    <li>
+    <li style={{ listStyleType: 'none', display: 'flex', justifyContent: 'space-between' }}>
       <div>
+      <button onClick={handleButtonClick}>
+  <FontAwesomeIcon
+    icon={isClicked ? faCheckCircle : faCircle}
+    className={isClicked ? 'clicked' : 'not-clicked'}
+  />
+</button>
         <span>{item.name}</span>
-        <span> (Quantity: {item.quantity})</span>
+        <span> (Amount: {item.quantity})</span>
       </div>
-      <div>
+      <div style={{ display: 'flex', gap: '5px' }}>
         <button onClick={() => handleUpdateQuantity(-1)}>
           <FontAwesomeIcon icon={faMinus} />
         </button>

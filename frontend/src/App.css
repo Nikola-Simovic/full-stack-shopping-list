@@ -5,12 +5,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   color: #e5e0d8;
+  font-family: Sriracha, cursive;
 }
 
 .App {
-  font-family: sans-serif;
   text-align: center;
 }
 
@@ -24,15 +23,17 @@ body {
 
 .main-container {
   background-color: #809671;
-  width: 5000px;
+  width: 30rem;
   height: min-content;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
 }
 
 .title {
+  font-family: Sriracha, cursive;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .add-item-box {
@@ -41,6 +42,7 @@ body {
   margin-top: 1em;
   margin-bottom: 1em;
   display: flex;
+  flex-direction: column;
   align-items: center;
   border-radius: 15px;
   padding: 5px;
@@ -69,6 +71,11 @@ input:focus {
 .item-list {
   display: flex;
   flex-direction: column;
+  font-family: Sriracha, cursive;
+}
+
+.clicked {
+  text-decoration: line-through;
 }
 
 .item-container {
@@ -96,7 +103,6 @@ input:focus {
 
 .remove-button {
   color: white;
-  background-color: red;
 }
 
 .total {
@@ -121,12 +127,34 @@ button {
   margin: 3px;
   color: #e5d2b8;
 }
+
 button:focus {
   outline: 0;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.add-input {
+  border: none;
+  border-radius: 10px;
+  margin: 4px;
+  background-color: #e5d2b8;
+}
+
+.add-button {
+  color: #809671;
+}
+
+.button-container{
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+}
+
+.button-container p {
+  margin-right: 10px;
 }
 
 .completed {
