@@ -7,8 +7,7 @@ require('dotenv').config();
 
 const middlewares = require('./middlewares');
 const api = require('./api');
-const itemsRouter=require('./api/v1/items');
-
+const itemsRouter = require('./api/v1/items');
 
 const app = express();
 
@@ -24,8 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/v1', api);
-app.use('/api/v1/items',itemsRouter);
-
+app.use('/api/v1/items', itemsRouter);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
