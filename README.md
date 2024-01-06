@@ -18,7 +18,17 @@ Ports:
 * backend 172.16.6.26:4000
 
 
-Endpoints:
+Endpoint:  https://23wsp-pro12.course.tamk.cloud/api/v1/items
+
+* Endpoint for item 1: https://23wsp-pro12.course.tamk.cloud/api/v1/items/1
+* Endpoint for item 2: https://23wsp-pro12.course.tamk.cloud/api/v1/items/2
+* Endpoint for item 3: https://23wsp-pro12.course.tamk.cloud/api/v1/items/3
+
+Other numbers will not not work since we only have 3 items in the backend api. Any other number will give this message: 
+
+```
+{"message":"Not found"}
+```
 
 ### How to run locally: 
 
@@ -59,7 +69,7 @@ Created the needed dockerfiles and made sure that all containers are running and
 
 **Phase 3**
 
-In this stage two CI/CD pipelines were set up, with the following stages: test, build, and deploy. One in order to make sure that when posting something to main everything functions properly, and the other in order to make sure the code is working properly before a pull request can be made. To ensure functionality, we installed dependencies in both the backend and frontend folders. Before installing the required dependencies yourself, navigate to the correct folder from the main directory using 'cd backend' and 'cd frontend'.
+In this phase two CI/CD pipelines were set up, with the following stages: test, build, and deploy. One in order to make sure that when posting something to main everything functions properly, and the other in order to make sure the code is working properly before a pull request can be made. To ensure functionality, we installed dependencies in both the backend and frontend folders. Before installing the required dependencies yourself, navigate to the correct folder from the main directory using 'cd backend' and 'cd frontend'.
 
 for backend dependencies:
 ```
@@ -83,6 +93,17 @@ Finally we created environmental secrets and adjusted branch protection via gith
 
 **Phase 4**
 
+In this phase, we created a Shopping List Application using React.js for the frontend. The frontend comprises a basic container that has all the required features. A functional API was also implemented to manage shopping list items, stored within an array. Upon opening the app, a set of sample items is displayed.
+
+To add an item to the list, you can either click the plus sign or press Enter. Additionally, the application supports modifying item quantities through plus and minus buttons, as well as deleting items using the trash button. Each item has a bullet point, and clicking on the circle adds a checkmark, indicating that the item has been acquired.
+
+At the end of the list, a total quantity is provided, giving users an overview of the total number of items on the list. Backend adjustments were made to handle GET, POST, and DELETE calls. The implementation of GET by ID allows for retrieving individual items from the API endpoint, with three default items currently available.
+
+Furthermore, we've incorporated validation into the system through the use of a schema. This ensures that there is always a quantity associated with each item and that item names are required to be at least 1 letter long. Additionally, the validation prevents the quantity from going below 0; if such an attempt is made, the system will display an error message, enhancing the robustness and user-friendliness of the application.
+
+For ease of testing and verification, a .rest file has been included, specifying the requests required for checking the functionality of the application.
+
+
 **Phase 5**
 
 
@@ -103,12 +124,13 @@ Finally we created environmental secrets and adjusted branch protection via gith
     * Updated README
 
 * 0.4.0
-    * Frontend
-    * Backend
+    * Frontend fully implemented
+    * Backend fully implemented
+    * Updated README
 
 ------------------------
 
 =======
 
 Expected project grade and reasoning behind it:
-50%, all the specified functionalities for the steps up until this point are met.
+5, all the specified functionalities for the steps up until this point are met, including the extra delete and post steps during phase 4.
