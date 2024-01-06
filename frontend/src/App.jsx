@@ -18,7 +18,7 @@ function App() {
       setError(null);
       setIsLoading(true);
 
-      const response = await fetch(`http://localhost:5000/api/v1/items`);
+      const response = await fetch(`https://23wsp-pro12.course.tamk.cloud/api/v1/items`);
 
       if (!response.ok) {
         throw new Error("Something went wrong!");

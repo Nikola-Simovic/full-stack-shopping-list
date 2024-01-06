@@ -53,7 +53,7 @@ router.post('/', (req,res) => {
     const newItem = {
         id: ITEMS.length+1, 
         name: name,
-        quantity:1,
+        quantity:quantity+=0, //For now it remains the same (starting off at 1) but if we need to, we can add a choice of quantity as well
     }
     ITEMS.push(newItem);
     res.send(newItem);
