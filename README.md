@@ -124,8 +124,8 @@ For ease of testing and verification, a .rest file has been included, specifying
     * Updated README
 
 * 0.4.0
-    * Frontend
-    * Backend
+    * Frontend fully implemented
+    * Backend fully implemented
     * Updated README
 
 ------------------------
@@ -133,4 +133,4 @@ For ease of testing and verification, a .rest file has been included, specifying
 =======
 
 Expected project grade and reasoning behind it:
-50%, all the specified functionalities for the steps up until this point are met.
+5, all the specified functionalities for the steps up until this point are met, including the extra delete and post steps during phase 4.
