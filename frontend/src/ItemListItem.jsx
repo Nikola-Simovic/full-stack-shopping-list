@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinus, faPlus, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faMinus, faPlus, faCheckCircle, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ItemListItem = ({ item, onRemove, onUpdateQuantity }) => {
   const handleRemove = () => {
@@ -10,7 +10,6 @@ const ItemListItem = ({ item, onRemove, onUpdateQuantity }) => {
   };
 
   const handleUpdateQuantity = (quantityChange) => {
-    // Directly update the state without checking onUpdateQuantity
     onUpdateQuantity(item.name, quantityChange);
   };
 
@@ -18,7 +17,7 @@ const ItemListItem = ({ item, onRemove, onUpdateQuantity }) => {
     <li>
       <div>
         <span>{item.name}</span>
-        <span> (Quantity: {item.quantity || 1})</span>
+        <span> (Quantity: {item.quantity})</span>
       </div>
       <div>
         <button onClick={() => handleUpdateQuantity(-1)}>
@@ -28,7 +27,7 @@ const ItemListItem = ({ item, onRemove, onUpdateQuantity }) => {
           <FontAwesomeIcon icon={faPlus} />
         </button>
         <button onClick={handleRemove}>
-          <FontAwesomeIcon icon={faCheckCircle} />
+          <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>
     </li>

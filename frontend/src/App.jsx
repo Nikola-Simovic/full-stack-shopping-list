@@ -18,7 +18,7 @@ function App() {
       setError(null);
       setIsLoading(true);
 
-      const response = await fetch(`https://23wsp-pro12.course.tamk.cloud/api/v1/shoppingItems`);
+      const response = await fetch(`https://23wsp-pro12.course.tamk.cloud/api/v1/items`);
 
       if (!response.ok) {
         throw new Error("Something went wrong!");
@@ -49,10 +49,21 @@ function App() {
   const updateQuantityHandler = (itemName, quantityChange) => {
     setItems((prevItems) =>
       prevItems.map((item) =>
-        item.name === itemName ? { ...item, quantity: item.quantity + quantityChange } : item
+        item.name === itemName
+          ? {
+              ...item,
+              quantity: Math.max(1, item.quantity + quantityChange),
+            }
+          : item
       )
     );
+  
+    if (quantityChange < 1 && items.find((item) => item.name === itemName)?.quantity + quantityChange < 1) {
+      window.alert('The minimum amount you can buy is one item! \nPlease delete an item if you dont plan on buying it.');
+    }
   };
+  
+  
 
   const totalItems = items.reduce((total, item) => total + (item.quantity || 1), 0);
 
