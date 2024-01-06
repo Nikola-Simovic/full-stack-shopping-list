@@ -88,15 +88,15 @@ function App() {
   } else {
     content = <p>There are no items on the list!</p>;
   }
-
+  
   return (
     <div className="app-background">
       <div className="main-container">
         <h1 className="title">Shopping list:</h1>
 		<div id="NewItem" className="add-item-box">
           <NewItem addItem={addItemHandler} />
-        <p className="total">Total Items: {totalItems}</p>
         <ul className="item-list">{content}</ul>
+        <p className="total">Total Items: {totalItems}</p>
         </div>
       </div>
     </div>

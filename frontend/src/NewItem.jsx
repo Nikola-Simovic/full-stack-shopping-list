@@ -46,12 +46,14 @@ const NewItem = (props) => {
 
 
       return (
-        <form onSubmit={submitHandler}>
+        <form className="button-container" onSubmit={submitHandler}>
           <p>
             <label>Add Item: </label>
-            <input type="text" onChange={ItemChangeHandler} value={items.name} />
+            <input class="add-input" type="text" onChange={ItemChangeHandler} value={items.name} />
           </p>
-          <button type="submit">➕ ADD</button>
+          <button className="add-button" type="submit">
+        <FontAwesomeIcon icon={faPlus} />
+      </button>
         </form>
       );
 };

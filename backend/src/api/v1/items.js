@@ -5,12 +5,12 @@ const router = express.Router();
 const ITEMS = [
   {
     id: 1,
-    name: 'Item 1',
+    name: 'Chocolate',
     quantity: 1,
   },
   {
     id: 2,
-    name: 'Item 2',
+    name: 'Cevapi',
     quantity: 1,
 
   },
