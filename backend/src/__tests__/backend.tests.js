@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../app');
 
-describe('The shopping lists GET endpoint tests',()=>{
+describe('The shopping lists base GET endpoint test',()=>{
     it('should return a shopping list in JSON format', async ()=>{
         const response = await request(app).get('/api/v1/items');
 
@@ -25,7 +25,9 @@ describe('The shopping lists GET endpoint tests',()=>{
         ]);
 
     });
+});
 
+describe('The shopping lists GET by ID endpoint test',()=>{
     it('should return a single shopping list item if the id is present', async ()=>{
         const response = await request(app).get('/api/v1/items/3');
 
@@ -37,7 +39,9 @@ describe('The shopping lists GET endpoint tests',()=>{
         },);
 
     });
+});
 
+describe('The shopping lists wrong-address-TEST',()=>{
     it('should return 404 when the wrong address is put', async ()=>{
         const response = await request(app).get('/api/v1/absolutelynotitems');
 
@@ -46,7 +50,8 @@ describe('The shopping lists GET endpoint tests',()=>{
     });
 });
 
-describe('The POST shopping list endpoint tests', () =>{  
+
+describe('Shopping list basic POST functionality test', () =>{  
     it('It should create a new shopping list item', async () =>{
         const newItem = {
             name : "A golden retriever????" ,
@@ -61,7 +66,10 @@ describe('The POST shopping list endpoint tests', () =>{
         expect(response.body.id).toBeTruthy();
         expect(response.body.name).toEqual(newItem.name);
     })
+});
 
+
+describe('Shopping list POST validation test', () =>{  
     it('It should not allow a new item without a name', async () =>{
         const newItem = {
             quantity:1
