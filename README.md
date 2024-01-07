@@ -106,6 +106,9 @@ For ease of testing and verification, a .rest file has been included, specifying
 
 **Phase 5**
 
+In this phase, we've implemented custom tests on the backend to ensure the functionality of our system. These tests cover various aspects, including GET, POST, and DELETE functionalities. Additionally, we've included a singular PUT test, anticipating potential updates to the app that may introduce this functionality in the future.
+
+In addition to the backend tests, we've incorporated a single custom frontend test. This particular test is designed to verify the correct display of the "shopping list" on the page. These tests collectively contribute to the comprehensive validation of both the backend and frontend, ensuring the reliability and accuracy of our application.
 
 ------------------------
 
@@ -127,6 +130,10 @@ For ease of testing and verification, a .rest file has been included, specifying
     * Frontend fully implemented
     * Backend fully implemented
     * Updated README
+
+* 0.5.0
+    * Custom tests for both frontend and backend
+    * Fully updated README
 
 ------------------------
 
