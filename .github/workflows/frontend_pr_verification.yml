@@ -9,14 +9,14 @@ on:
     paths:
      - frontend/**
 
-env: 
+env:
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
-  FRONTEND_IMAGE_NAME: se-5g00dm04/2023---final-project-not-fast-just-furious/frontend
-  BACKEND_IMAGE_NAME: se-5g00dm04/2023---final-project-not-fast-just-furious/backend
+  FRONTEND_IMAGE_NAME: 2023---final-project-not-fast-just-furious/frontend
+  BACKEND_IMAGE_NAME: 2023---final-project-not-fast-just-furious/backend
 
 jobs:
-  # Job for testing the frontend  code changes 
+  # Job for testing the frontend  code changes
   test:
     # running on ubuntu
     runs-on: ubuntu-latest
@@ -27,18 +27,18 @@ jobs:
       # Fetch the code using the checkout action
       - name: Fetch Code
         uses: actions/checkout@v3
-        
+
       # Installing a Node LTS version
       - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          
+
       # Installing the node modules for the frontend
       - name: Install Frontend Dependencies
         working-directory: ./frontend
         run: npm install
-        
+
       # Running the tests for the frontend code
       - name: Run Frontend Tests
         working-directory: ./frontend
@@ -50,30 +50,30 @@ jobs:
     runs-on: ubuntu-latest
     # Test job needs to succeed
     name:  Build Frontend Containers
-    
+
     needs: test
     # Give the job permission to write packages to the registry
     permissions:
       contents: read
       packages: write
-      
+
     steps:
       # Fetch the code using the checkout action
       - name: Fetch Code
         uses: actions/checkout@v3
-        
+
       # Installing the node modules for the frontend
       - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: "18"
-          
+
       # Setting up the Docker build environment
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-        
+
       # Loggin into the GitHub container registry
       - name: Docker Login
         uses: docker/login-action@v3.0.0
@@ -84,7 +84,7 @@ jobs:
           username: ${{ github.actor }}
           # A special GitHub secret token we can use
           password: ${{ secrets.GITHUB_TOKEN }}
-          
+
       # Building and pushing the frontend image to the registry using an action
       - name: Build and push Docker Frontend images
         uses: docker/build-push-action@v5.0.0
@@ -93,6 +93,6 @@ jobs:
           file: ./frontend/DockerfileServer
           push: false
           tags: "${{ env.REGISTRY }}/${{ env.FRONTEND_IMAGE_NAME }}"
-          
+
 
 
