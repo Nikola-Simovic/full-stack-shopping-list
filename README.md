@@ -139,7 +139,5 @@ In addition to the backend tests, we've incorporated a single custom frontend te
 
 ------------------------
 
-=======
-
 Expected project grade and reasoning behind it:
 5, all the specified functionalities for the steps up until this point are met, including the extra delete and post steps during phase 4.
