@@ -12,8 +12,8 @@ on:
 env:
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
-  FRONTEND_IMAGE_NAME: 2023---final-project-not-fast-just-furious/frontend
-  BACKEND_IMAGE_NAME: 2023---final-project-not-fast-just-furious/backend
+  FRONTEND_IMAGE_NAME: full-stack-shopping-list/tree/main/frontend
+  BACKEND_IMAGE_NAME: full-stack-shopping-list/tree/main/backend
 
 jobs:
   # Job for testing the frontend and backend code changes

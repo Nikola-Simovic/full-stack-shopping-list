@@ -204,7 +204,7 @@ jobs:
 env: # adding enviromental variables.
   REGISTRY: ghcr.io
   REPOSITORY: ${{ github.repository }}
-  FRONTEND_IMAGE_NAME: 2023---final-project-not-fast-just-furious/tree/main/frontend
-  BACKEND_IMAGE_NAME:  2023---final-project-not-fast-just-furious/tree/main/backend
+  FRONTEND_IMAGE_NAME: full-stack-shopping-list/tree/main/frontend
+  BACKEND_IMAGE_NAME:  full-stack-shopping-list/tree/main/backend
 
 # Trying out stuff
