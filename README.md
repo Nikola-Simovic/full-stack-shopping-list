@@ -2,7 +2,9 @@
 # Not fast just furious: Shopping list
 > By Maria Kailahti and Nikola Simovic ┃ @mariakailahti @Nikola-Simovic
 
-Welcome to our project for the Web Software Production course. We are developing a comprehensive shopping list application, showcasing our proficiency in full-stack development. Our project has a CI/CD system, using the tools and methods we learned in the course. This project represents our learning journey in full-stack development.
+Welcome to our project for the Web Software Production course. We are developing a comprehensive shopping list application, showcasing our proficiency in full-stack development. Our project has a CI/CD system, using the tools and methods we learned in the course. This project represents our journey in this years full-stack development.
+
+*On a final note from the creators, the project has been moved to this repository after it's final version has been completed elsewhere, so unfortunately the only release available will be the newest 1.0.0 one. As the code itself is currently being hosted by official university servers, we can not be sure of the websites availability in the future, but it is fully functioning and (as of 28.01.2024.) can still be reached via the address in this ReadMe file (also note that unlike the server address, the IP address is available only to those with the proper VPN access).
 
 ------------------------
 
@@ -11,10 +13,10 @@ Welcome to our project for the Web Software Production course. We are developing
 Server address: https://23wsp-pro12.course.tamk.cloud/
 
 The IP address: 172.16.6.26
-    
-    
+
+
 Ports:
-* frontend: 172.16.6.26:8000 
+* frontend: 172.16.6.26:8000
 * backend 172.16.6.26:4000
 
 
@@ -24,13 +26,13 @@ Endpoint:  https://23wsp-pro12.course.tamk.cloud/api/v1/items
 * Endpoint for item 2: https://23wsp-pro12.course.tamk.cloud/api/v1/items/2
 * Endpoint for item 3: https://23wsp-pro12.course.tamk.cloud/api/v1/items/3
 
-Other numbers will not not work since we only have 3 items in the backend api. Any other number will give this message: 
+Other numbers will not not work since we only have 3 items in the backend api. Any other number will give this message:
 
 ```
 {"message":"Not found"}
 ```
 
-### How to run locally: 
+### How to run locally:
 
 
 In order to run the code locally, run npm install in the appropriate folders (frontend and backend), after which by running the "npm start" command in the terminal, the frontend or backend will start functioning and will be accessible on your localhost via ports 3000 and 5000.
@@ -86,7 +88,7 @@ A remote server was taken into use in this phase and here the details for it:
 * Server address: [address](https://23wsp-pro12.course.tamk.cloud/)
 * the IP address: 172.16.6.26
     Ports:
-    * frontend: 172.16.6.26:8000 
+    * frontend: 172.16.6.26:8000
     * backend 172.16.6.26:4000
 
 Finally we created environmental secrets and adjusted branch protection via github.
