@@ -1,10 +1,14 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/iuze45af)
+
 # Not fast just furious: Shopping list
 > By Maria Kailahti and Nikola Simovic ┃ @mariakailahti @Nikola-Simovic
 
-Welcome to our project for the Web Software Production course. We are developing a comprehensive shopping list application, showcasing our proficiency in full-stack development. Our project has a CI/CD system, using the tools and methods we learned in the course. This project represents our journey in this years full-stack development.
+Welcome to our final project for the Web Software Production course. We are developing a comprehensive shopping list application, showcasing our proficiency in full-stack development. Our project's CI/CD pipeline, and everything from the frontend to the backend as well as the API itself, has been built using the tools and methods we learned in the course. This project represents our journey in this year's full-stack development.
 
-*On a final note from the creators, the project has been moved to this repository after it's final version has been completed elsewhere, so unfortunately the only release available will be the newest 1.0.0 one. As the code itself is currently being hosted by official university servers, we can not be sure of the websites availability in the future, but it is fully functioning and (as of 28.01.2024.) can still be reached via the address in this ReadMe file (also note that unlike the server address, the IP address is available only to those with the proper VPN access).
+*On a final note from the creators, the project has been moved to this repository after it's final version has been completed elsewhere, so unfortunately the only release available will be the newest 1.0.0 one.
+
+*As of the current date (28.01.2024), the code is being hosted on official university servers. While the website is fully functioning and can still be accessed via the address in this ReadMe file, we cannot guarantee its availability in the future. It's important to note that, unlike the server address, the IP address is accessible only to those with the proper VPN access.
+
+*Due to the nature of the project, some parts of the build and deploy phase had to be modified or removed when moving to a new repository. In order to ensure clarity after the move, all larger changes have been thoroughly commented in the source code itself.
 
 ------------------------
 
